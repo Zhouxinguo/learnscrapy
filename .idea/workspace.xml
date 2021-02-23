@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7969a03a-34f0-422d-904d-9ba5b3522dc3" name="Default Changelist" comment="" />
+    <list default="true" id="7969a03a-34f0-422d-904d-9ba5b3522dc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/learnscrapy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/spiders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/spiders/ssr1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapy.cfg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614048399175</updated>
-      <workItem from="1614048420832" duration="51000" />
+      <workItem from="1614048420832" duration="299000" />
     </task>
     <servers />
   </component>
