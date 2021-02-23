@@ -4,8 +4,38 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
+import pymysql
 
 class LearnscrapyPipeline(object):
     def process_item(self, item, spider):
+        return item
+
+class SSR1Pipeline:
+    def __init__(self):
+        self.conn: pymysql.connect
+        self.cur:pymysql.cursors.Cursor
+        self.queue = []
+        self.count = 0
+
+    def open_spider(self,spider):
+        self.conn = pymysql.connect(host='0.0.0.0',user='root',password='mysql',db='test',port=3306,charset='utf8')
+        self.cur = self.conn.cursor()
+
+    def close_spider(self,spider):
+        if len(self.queue) > 0:
+            self.insert_database()
+        self.cur.close()
+        self.conn.close()
+
+    def insert_database(self):
+        sql = 'insert into ssr1 (country,date,director,fraction,time,title) values (%s,%s,%s,%s,%s,%s)'
+        self.cur.executemany(sql,self.queue)
+        self.queue.clear()
+        self.conn.commit()
+
+    def process_item(self, item, spider):
+        self.queue.append((item['country'],item['date'],item['director'],item['fraction'],item['time'],item['title']))
+        print(self.queue)
+        if len(self.queue) > 30:
+            self.insert_database()
         return item
