@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7969a03a-34f0-422d-904d-9ba5b3522dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learnscrapy/spiders/spa1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnscrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnscrapy/spiders/ssr1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnscrapy/spiders/spa1.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/spiders/spa2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spa1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="spa2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learnscrapy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,7 +97,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Desktop\ubuntu\pachong\learnscrapy\learnscrapy\spiders\spa1.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Desktop\ubuntu\pachong\learnscrapy\learnscrapy\spiders\spa2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +109,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.spa1" />
+        <item itemvalue="Python.spa2" />
         <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
@@ -127,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614048399175</updated>
       <workItem from="1614048420832" duration="9334000" />
-      <workItem from="1614065708060" duration="11905000" />
+      <workItem from="1614065708060" duration="19468000" />
     </task>
     <servers />
   </component>
@@ -147,22 +145,22 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="1013" y="201" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1614062894731" />
-    <state width="1290" height="454" key="GridCell.Tab.0.bottom" timestamp="1614134074170">
+    <state width="1449" height="452" key="GridCell.Tab.0.bottom" timestamp="1614155194512">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.center" timestamp="1614134074170">
+    <state width="1449" height="452" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1614155194512" />
+    <state width="1449" height="452" key="GridCell.Tab.0.center" timestamp="1614155194511">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.left" timestamp="1614134074170">
+    <state width="1449" height="452" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1614155194511" />
+    <state width="1449" height="452" key="GridCell.Tab.0.left" timestamp="1614155194511">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.right" timestamp="1614134074170">
+    <state width="1449" height="452" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1614155194511" />
+    <state width="1449" height="452" key="GridCell.Tab.0.right" timestamp="1614155194511">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
+    <state width="1449" height="452" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1614155194511" />
     <state width="1864" height="321" key="GridCell.Tab.1.bottom" timestamp="1614069139392">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -210,7 +208,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/learnscrapy$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1614067102596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/learnscrapy$main.coverage" NAME="main Coverage Results" MODIFIED="1614133925115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy" />
+    <SUITE FILE_PATH="coverage/learnscrapy$main.coverage" NAME="main Coverage Results" MODIFIED="1614154213280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy" />
     <SUITE FILE_PATH="coverage/learnscrapy$ssr1.coverage" NAME="ssr1 Coverage Results" MODIFIED="1614133697104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy/spiders" />
   </component>
 </project>
