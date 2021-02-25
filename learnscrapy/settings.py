@@ -70,7 +70,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'learnscrapy.pipelines.SPA4Pipeline': 300,
+   'learnscrapy.pipelines.SPA5Pipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -11,7 +11,7 @@ class LearnscrapyPipeline(object):
         return item
 
 
-class SPA4Pipeline(object):
+class SPA5Pipeline(object):
     def __init__(self):
         self.conn : pymysql.connect = None
         self.cur : pymysql.cursors.Cursor
@@ -29,7 +29,7 @@ class SPA4Pipeline(object):
         self.conn.close()
 
     def insert_datanase(self):
-        sql = "insert into spa4 (code,published_at,title,updated_at,url,website) values (%s,%s,%s,%s,%s,%s)"
+        sql = "insert into spa5 (title,author,price,time,press,page,isbm) values (%s,%s,%s,%s,%s,%s,%s)"
         self.cur.executemany(sql,self.queue)
         self.queue.clear()
         self.conn.commit()
@@ -37,8 +37,8 @@ class SPA4Pipeline(object):
 
     def process_item(self, item, spider):
         self.queue.append(
-            (item['code'], item['published_at'], item['title'], item['updated_at'], item['url'], item['website']))
-        if len(self.queue) > 3000:
+            (item['title'], item['author'], item['price'], item['time'], item['press'], item['page'],item['isbm']))
+        if len(self.queue) > 300:
             s = time.time()
             self.insert_datanase()
             print(time.time() - s)
