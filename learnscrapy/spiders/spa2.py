@@ -1,39 +1,33 @@
 import scrapy
 from scrapy import Request
-from learnscrapy.items import SPA1Item
+from learnscrapy.items import SPA3Item
 import time,random,base64
 from hashlib import sha1
 
 class SPA2Spider(scrapy.Spider):
-    name = 'spa2'
-
-    @staticmethod
-    def sign(url):
-        t = str(int(time.time()) - random.randint(1,20))
-        s = ','.join([url,t])
-        return base64.b64encode(','.join([sha1(s.encode()).hexdigest(),t]).encode()).decode()
+    name = 'spa3'
+    offset = 0
+    url = 'https://spa3.scrape.center/api/movie/?limit=10&offset=%s'
 
     def start_requests(self):
-        urls = [
-            f'http://spa2.scrape.center/api/movie/?limit=10&offset={a}&token={self.sign("/api/movie")}' for a in range(0,100,10)
-        ]
+        urls = [self.url % self.offset]
         for url in urls:
             yield scrapy.Request(url=url,callback=self.parse)
 
     def parse(self, response, **kwargs):
         result = response.json()
-        print('response:',response)
         for a in result['results']:
-            item = SPA1Item()
+            item = SPA3Item()
             item['title'] = a['name'] + a['alias']
             item['fraction'] = a['score']
             item['country'] = '、'.join(a['regions'])
             item['time'] = a['minute']
             item['date'] = a['published_at']
-            s = 'ef34#teuq0btua#(-57w1q5o5--j@98xygimlyfxs*-!i-0-mb'
-            detail = base64.b64encode((s + str(a["id"])).encode()).decode()
+            yield Request(url=response.urljoin(f'/api/movie/{a["id"]}'),callback=self.parse_person,meta={'item':item})
 
-            yield Request(url=response.urljoin(f'/api/movie/{detail}/?token={self.sign("/api/movie/" + detail)}'),callback=self.parse_person,meta={'item':item})
+        if self.offset < result['count']:
+            self.offset += 10
+            yield Request(url=self.url % self.offset, callback=self.parse)
         pass
 
     def parse_person(self,response):

@@ -13,7 +13,7 @@ class LearnscrapyItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
-class SPA1Item(scrapy.Item):
+class SPA3Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = scrapy.Field()
