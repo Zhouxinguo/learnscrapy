@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7969a03a-34f0-422d-904d-9ba5b3522dc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learnscrapy/spiders/spa1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnscrapy/spiders/login3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learnscrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnscrapy/spiders/ssr1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnscrapy/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnscrapy/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnscrapy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnscrapy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnscrapy/spiders/spa1.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +48,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="login3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learnscrapy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learnscrapy/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Desktop\ubuntu\pachong\learnscrapy\learnscrapy\spiders\login3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learnscrapy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,33 +114,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spa1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="learnscrapy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learnscrapy/spiders" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Desktop\ubuntu\pachong\learnscrapy\learnscrapy\spiders\spa1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.spa1" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.login3" />
       </list>
     </recent_temporary>
   </component>
@@ -128,6 +134,8 @@
       <updated>1614048399175</updated>
       <workItem from="1614048420832" duration="9334000" />
       <workItem from="1614065708060" duration="11905000" />
+      <workItem from="1614432634814" duration="2751000" />
+      <workItem from="1614643160469" duration="7695000" />
     </task>
     <servers />
   </component>
@@ -135,34 +143,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="853" y="178" key="#Deployment" timestamp="1614062935671">
+    <state x="853" y="178" key="#Deployment" timestamp="1614432996840">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="853" y="178" key="#Deployment/0.0.1920.1032@0.0.1920.1032" timestamp="1614062935671" />
+    <state x="853" y="178" key="#Deployment/0.0.1920.1032@0.0.1920.1032" timestamp="1614432996840" />
     <state x="633" y="89" key="#Servers" timestamp="1614062906842">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="633" y="89" key="#Servers/0.0.1920.1032@0.0.1920.1032" timestamp="1614062906842" />
-    <state x="1013" y="201" key="FileChooserDialogImpl" timestamp="1614062894731">
+    <state x="1013" y="201" key="FileChooserDialogImpl" timestamp="1614432783950">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="1013" y="201" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1614062894731" />
-    <state width="1290" height="454" key="GridCell.Tab.0.bottom" timestamp="1614134074170">
+    <state x="1013" y="201" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1614432783950" />
+    <state width="1864" height="457" key="GridCell.Tab.0.bottom" timestamp="1614659424357">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.center" timestamp="1614134074170">
+    <state width="1864" height="457" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1614659424357" />
+    <state width="1864" height="457" key="GridCell.Tab.0.center" timestamp="1614659424357">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.left" timestamp="1614134074170">
+    <state width="1864" height="457" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1614659424357" />
+    <state width="1864" height="457" key="GridCell.Tab.0.left" timestamp="1614659424357">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
-    <state width="1290" height="454" key="GridCell.Tab.0.right" timestamp="1614134074170">
+    <state width="1864" height="457" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1614659424357" />
+    <state width="1864" height="457" key="GridCell.Tab.0.right" timestamp="1614659424357">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1290" height="454" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1614134074170" />
+    <state width="1864" height="457" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1614659424357" />
     <state width="1864" height="321" key="GridCell.Tab.1.bottom" timestamp="1614069139392">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -183,34 +191,35 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="816" y="155" key="RollbackChangesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1614063255328" />
-    <state x="20" y="66" key="SettingsEditor" timestamp="1614065189795">
+    <state x="532" y="108" key="SettingsEditor" timestamp="1614432834993">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="20" y="66" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1614065189795" />
+    <state x="532" y="108" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1614432834993" />
     <state x="451" y="181" key="Vcs.Push.Dialog.v2" timestamp="1614073462430">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="451" y="181" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1614073462430" />
-    <state x="741" y="295" key="com.intellij.ide.util.TipDialog" timestamp="1614065709169">
+    <state x="741" y="295" key="com.intellij.ide.util.TipDialog" timestamp="1614643160499">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="741" y="295" key="com.intellij.ide.util.TipDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1614065709169" />
-    <state x="321" y="189" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1614065186813">
+    <state x="741" y="295" key="com.intellij.ide.util.TipDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1614643160499" />
+    <state x="321" y="189" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1614432223682">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="321" y="189" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1920.1032@0.0.1920.1032" timestamp="1614065186813" />
-    <state x="1236" y="269" width="381" height="672" key="ftp.server.browser" timestamp="1614063616959">
+    <state x="321" y="189" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1920.1032@0.0.1920.1032" timestamp="1614432223681" />
+    <state x="1236" y="269" width="381" height="672" key="ftp.server.browser" timestamp="1614432819236">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="1236" y="269" width="381" height="672" key="ftp.server.browser/0.0.1920.1032@0.0.1920.1032" timestamp="1614063616959" />
+    <state x="1236" y="269" width="381" height="672" key="ftp.server.browser/0.0.1920.1032@0.0.1920.1032" timestamp="1614432819236" />
     <state x="860" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1614065769871">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="860" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1614065769871" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/learnscrapy$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1614067102596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/learnscrapy$main.coverage" NAME="main Coverage Results" MODIFIED="1614133925115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy" />
+    <SUITE FILE_PATH="coverage/learnscrapy$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1614433595865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/learnscrapy$main.coverage" NAME="main Coverage Results" MODIFIED="1614659383918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy" />
+    <SUITE FILE_PATH="coverage/learnscrapy$spa4.coverage" NAME="spa4 Coverage Results" MODIFIED="1614234217721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy/spiders" />
     <SUITE FILE_PATH="coverage/learnscrapy$ssr1.coverage" NAME="ssr1 Coverage Results" MODIFIED="1614133697104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnscrapy/spiders" />
   </component>
 </project>
