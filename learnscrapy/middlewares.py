@@ -5,8 +5,9 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import json
+import random
 from scrapy import signals
-from scrapy_selenium import SeleniumMiddleware
 
 
 class LearnscrapySpiderMiddleware(object):
@@ -104,14 +105,11 @@ class LearnscrapyDownloaderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class MyDownloadMiddleware(SeleniumMiddleware):
-    def __init__(self, driver_name, driver_executable_path, driver_arguments,
-                 browser_executable_path):
-        super(MyDownloadMiddleware, self).__init__(driver_name, driver_executable_path, driver_arguments,
-                                                   browser_executable_path)
-        self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-            "source": """
-            Object.defineProperty(navigator, 'webdriver', {
-            get: () => undefined
-            })"""
-        })
+class Antispider2DownloaderMiddleware(LearnscrapyDownloaderMiddleware):
+    def __init__(self):
+        super(Antispider2DownloaderMiddleware, self).__init__()
+        with open('ua.json','r') as f:
+            self.ua = json.load(f)
+
+    def process_request(self, request, spider):
+        request.headers.update({'User-Agent':random.choice(self.ua)})
