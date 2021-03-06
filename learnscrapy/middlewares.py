@@ -5,7 +5,9 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-from scrapy import signals
+import requests
+from scrapy import signals, Request
+from scrapy.http import Response
 
 
 class LearnscrapySpiderMiddleware(object):
@@ -103,4 +105,25 @@ class LearnscrapyDownloaderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
+class Antispider5DownloaderMiddleware(LearnscrapyDownloaderMiddleware):
+    def __init__(self):
+        super(Antispider5DownloaderMiddleware, self).__init__()
 
+    @property
+    def proxy(self):
+        return 'http://' + requests.get('http://192.168.19.128:5000/get').json()['proxy']
+
+    def process_request(self, request: Request, spider):
+        # 将请求加上代理
+        request.meta['proxy'] = self.proxy
+        print('正在使用的ip',request.meta['proxy'])
+
+    def process_response(self, request, response: Response, spider):
+        # 如果响应代码为403，则将请求更换一个新代理重新请求
+        if response.status == 403:
+            print(f'重试：{response.url}')
+            request.meta['proxy'] = self.proxy
+            print('重新ip地址',request.meta['proxy'])
+            return request
+        else:
+            return response
