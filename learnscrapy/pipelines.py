@@ -13,7 +13,7 @@ class LearnscrapyPipeline(object):
     def process_item(self, item, spider):
         return item
 
-class Antispider5Pipeline:
+class Antispider6Pipeline:
     def __init__(self):
         self.client : pymongo.MongoClient
         self.queue = []
@@ -31,11 +31,11 @@ class Antispider5Pipeline:
     def insert_database(self):
         start = time.time()
         self.db['test'].insert_many(self.queue)
-        print(self.queue)
         print(time.time() - start)
         self.queue.clear()
 
     def process_item(self,item,spider):
+        print(ItemAdapter(item).asdict())
         self.queue.append(ItemAdapter(item).asdict())
         if len(self.queue) > 50:
             self.insert_database()
