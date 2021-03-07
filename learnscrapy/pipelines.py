@@ -13,7 +13,7 @@ class LearnscrapyPipeline(object):
     def process_item(self, item, spider):
         return item
 
-class Antispider6Pipeline:
+class Antispider7Pipeline:
     def __init__(self):
         self.client : pymongo.MongoClient
         self.queue = []

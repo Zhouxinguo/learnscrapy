@@ -1,46 +1,59 @@
 import scrapy
-import requests
 from scrapy import Request
-from scrapy.http import Response
-from learnscrapy.items import Antispider6ScrapyItem
+from scrapy.http.request.json_request import JsonRequest
+
+from learnscrapy.items import Antispider7ScrapyItem
 
 
-class Antispider6(scrapy.Spider):
-    name = 'antispider6'
+class Antispider7(scrapy.Spider):
+    name = 'antispider7'
+    # 建立cookie池
     cookies = []
+    offset = 0
+    limit = 18
+    url = f'https://antispider7.scrape.center/api/book/?limit={limit}&offset=%s'
 
     def start_requests(self):
-        login_url = 'https://antispider6.scrape.center/login'
-        for a in range(100):
-            # 在循环中使用刚才注册的那几个账号，dont_filter参数用来防止不同的请求被过滤掉，URL去重默认是打开的
-            yield scrapy.FormRequest(url=login_url,callback=self.add_cookie,
-                                     formdata={'username':f'1234-{a}@qq.com', 'password': f'1234-{a}@qq.com'},
-                                     dont_filter=True)
+        login_url = 'https://antispider7.scrape.center/api/login'
+        # login_url = 'http://httpbin.org'
+        for a in range(20):
+            # 使用json格式登录，不使用表单
+            yield JsonRequest(url=login_url, callback=self.add_cookie, method='POST',
+                              data={'username': f'12345{a}', 'password': f'12345{a}'},
+                              dont_filter=True)
 
+    def add_cookie(self, response):
+        # 将cookie保存起来
+        self.cookies.append(response.json()['token'])
+        # 当全部账号都已经登录成功后即可开始爬取流程
+        if len(self.cookies) >= 20:
+            print('登录完成，开始爬取...')
+            urls = [self.url % self.offset]
+            for url in urls:
+                yield scrapy.Request(url=url, callback=self.parse, dont_filter=True,
+                                     meta={'change_proxy': 0, 'change_cookie': 0})
 
-    def add_cookie(self,response:Response):
-        # 将cookie 保存起来77
-        self.cookies.append((response.request.headers.getlist('Cookie')))
-        # 当前全部账号都已经登录成功即可开始爬去流程
-        if len(self.cookies) >= 100:
-            print('登录完成，开始爬去...')
-            for a in range(1,11):
-                yield scrapy.Request(url=f'https://antispider6.scrape.center/page/{a}',callback=self.parse)
+    def parse(self, response, **kwargs):
+        result = response.json()
+        print(response.url)
+        for a in result['results']:
+            item = Antispider7ScrapyItem()
+            item['title'] = a['name']
+            item['author'] = '/'.join(a['authors'] or [])
+            yield Request(url=f'https://antispider7.scrape.center/api/book/{a["id"]}/', callback=self.parse2,
+                          meta={'item': item, 'change_proxy': 0, 'change_cookie': 0})
+        # 原始数据量太大了，这里只爬取200条
+        if 200 > self.offset:
+            self.offset += self.limit
+            yield Request(url=self.url % self.offset, callback=self.parse,dont_filter=True,
+                                     meta={'change_proxy': 0, 'change_cookie': 0})
 
-    def parse(self,response,**kwargs):
-        result = response.xpath('//div[@class="el-card item m-t is-hover-shadow"]')
-        for a in result:
-            item = Antispider6ScrapyItem()
-            item['title'] = a.xpath('.//h2[@class="m-b-sm"]/text()').get()
-            item['fraction'] = a.xpath('.//p[@class="score m-t-md m-b-n-sm"]/text()').get().strip()
-            item['country'] = a.xpath('.//div[@class="m-v-sm info"]/span[1]/text()').get()
-            item['time'] = a.xpath('.//div[@class="m-v-sm info"]/span[3]/text()').get()
-            item['date'] = a.xpath('.//div[@class="m-v-sm info"][2]/span/text()').get()
-            url = a.xpath('.//a[@class="name"]/@href').get()
-            yield Request(url=response.urljoin(url), callback=self.parse_person, meta={'item': item})
-
-    def parse_person(self, response):
+    def parse2(self, response):
         item = response.meta['item']
-        item['director'] = response.xpath(
-            '//div[@class="directors el-row"]//p[@class="name text-center m-b-none m-t-xs"]/text()').get()
+        result = response.json()
+        item['price'] = result['price'] or 0
+        item['time'] = result['published_at']
+        item['press'] = result['publisher']
+        item['page'] = result['page_number']
+        item['isbm'] = result['isbn']
         yield item
